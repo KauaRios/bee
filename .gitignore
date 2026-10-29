@@ -1,0 +1,30 @@
+# Cache do Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Configurações e credenciais locais
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+
+# Cache de testes e ferramentas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Arquivos temporários de editores e do sistema
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
