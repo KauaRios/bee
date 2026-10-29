@@ -1,5 +1,7 @@
 import argparse
 
+from linguagens import OPCOES
+
 
 def ler_argumentos():
     parser = argparse.ArgumentParser(
@@ -18,7 +20,7 @@ def ler_argumentos():
     exercice.add_argument("numero", type=int)
     exercice.add_argument(
         "linguagem",
-        choices=["c", "cpp", "python", "java","rust","rs","py"]
+        choices=OPCOES
     )
 
     teste=comandos.add_parser(

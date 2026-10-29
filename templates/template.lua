@@ -1,0 +1,2 @@
+-- Escreva a sua solução aqui.
+-- Leia com io.read() e escreva com print().

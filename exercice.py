@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from linguagens import EXTENSOES, normalizar_linguagem
+
 VERDE = "\033[32m"
 VERMELHO = "\033[31m"
 AZUL = "\033[34m"
@@ -8,28 +10,13 @@ RESET = "\033[0m"
 
 def criar_exercicio(numero: int, linguagem: str):
 
-    extensoes = {
-        "c": "c",
-        "cpp": "cpp",
-        "python": "py",
-        "java": "java",
-        "rust":"rs",
-        "py":"py",
-        "rs":"rs",
-    }
-    aliases = {
-    "py": "python",
-    "c++": "cpp",
-    "rs":"rust",
-    }
-    linguagem = linguagem.strip().lower()
-    linguagem=aliases.get(linguagem,linguagem)
+    linguagem = normalizar_linguagem(linguagem)
 
-    if linguagem not in extensoes:
+    if linguagem not in EXTENSOES:
         print(f"{VERMELHO}Erro: linguagem não suportada.{RESET}")
         return
 
-    extensao = extensoes[linguagem]
+    extensao = EXTENSOES[linguagem]
 
     try:
         print(f"{AZUL}Criando exercício {numero} em {linguagem}...{RESET}")

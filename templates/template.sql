@@ -1,0 +1,2 @@
+-- PostgreSQL: use as tabelas e colunas descritas no enunciado.
+-- Escreva a sua consulta aqui.
